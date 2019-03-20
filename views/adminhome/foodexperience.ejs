@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurent Name With Comment</title>
+
+	<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<h1>Restaurent Name With Comment</h1> 
+
+	<font size="5px"><a href="/adminhome">Back</a> |
+	<a href="/adminlogout">logout</a> </font>
+	<br>
+	<br>
+
+	<!-- <b  style="color:blue; font-size:40px;"><%=name%></b> -->
+
+	<!-- <h2><font color="red">MENU</font></h2> -->
+
+	<table border="0" width="100%"  >
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td>Restaurent Id</td>
+			<!-- <td width="2%">:</td> -->
+			<td><%=uList[i].resid%></td>
+			<td>Restaurent Name</td>
+			<!-- <td width="2%">:</td> -->
+			<td><%=uList[i].name%></td>
+			<td>Comment</td>
+			<!-- <td width="2%">:</td> -->
+			<td><%=uList[i].comment%></td>
+			<td><a href="/adminhome/deletecomment/<%= uList[i].id %>">Delete Comment</a></td>
+
+
+		</tr>
+
+
+
+		
+		<% } %>
+
+		<tr>
+
+			   <td><b style="color:blue;font-size:20px;">Add a new comment</b>
+				<br></td>
+		</tr>
+
+
+		<tr>
+			<form method="post">
+
+			<td>Restaurent Id</td>
+			<td><input type="text" name="resid"></td>
+			<td>Restaurent Name</td>
+			<td><input type="text" name="name"></td>
+			<td>Add Comment</td>
+			<td><input type="text" name="comment"></td>
+			<td><input type="submit" name="submit" value="Submit"></td>
+		    </form>
+		</tr>
+		
+		
+	</table>
+<br>
+
+
+
+
+</body>
+</html>

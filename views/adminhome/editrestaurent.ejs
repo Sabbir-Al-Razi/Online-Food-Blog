@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Restaurent Information</title>
+
+	<style>
+	table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+</head>
+<body>
+
+<h1>Edit Restaurent Information</h1> 
+
+	<font size="4px"><a href="/adminhome/restaurentinfo">Back</a> |
+	<a href="/adminlogout">LogOut</a> </font>
+	<br>
+	<br>
+
+<form method="post">
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">Name</td>
+			<td width="2%">:</td>
+			<td><input type="text"  name="name" value="<%=name%>"/></td>
+		</tr>
+		<tr>
+			<td>Location</td>
+			<td>:</td>
+			<td><input type="text"  name="location" value="<%=location%>" /></td>
+		</tr>
+		<tr>
+			<td>Background</td>
+			<td>:</td>
+			<td><input type="text"  name="background" value="<%=background%>" /></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td><input type="submit"  name="update" value="Update" /></td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>

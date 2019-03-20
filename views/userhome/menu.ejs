@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurent Name With Menu</title>
+
+	<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<h1>Restaurent Name With Menu</h1> 
+
+	<font size="5px"><a href="/memberhome/restaurentinfo">Back</a> |
+	<a href="/memberlogout">logout</a> </font>
+	<br>
+	<br>
+
+	<b  style="color:blue; font-size:40px;"><%=name%></b>
+
+	<h2><font color="red">MENU</font></h2>
+
+	<table border="0" width="300px" >
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td width="35%">Item Name</td>
+			<td width="2%">:</td>
+			<td><%=uList[i].item%></td>
+			<td width="35%">Price</td>
+			<td width="2%">:</td>
+			<td><%=uList[i].price%></td>
+		</tr>
+		
+		<% } %>
+		
+		
+	</table>
+<br>
+
+
+
+
+</body>
+</html>
